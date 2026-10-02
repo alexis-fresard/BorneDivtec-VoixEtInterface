@@ -179,7 +179,7 @@ sudo apt install -y git python3-dev python3-venv python3-pip python3-pillow \
 
 ```bash
 cd /home/admin
-git clone https://github.com/alexis-fresard/V2---Scripts-Python---interface--voix-et--coute.git Borne
+git clone https://github.com/alexis-fresard/BorneDivtec-VoixEtInterface
 cd Borne
 ```
 
