@@ -488,4 +488,4 @@ sudo systemctl restart divtec.service    # redémarrer après une modification
 ## 📬 Contact
 
 Projet réalisé pour la **Division technique du CEJEF (DIVTEC)**.
-Pour toute information supplémentaire : **Alexis Frésard**.
+Pour toute information supplémentaire : **Alexis Frésard (ES Informatique)**.
