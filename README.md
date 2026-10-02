@@ -39,10 +39,10 @@ et **illumine le chemin** sur le panneau mural grâce à des matrices LED placé
 
 ```
   « Où est la salle C2-07 ? »         ┌──────────────────────────────┐
-  ─────────── 🎤 ──────────────────▶  │  Raspberry Pi 4              │
+  ─────────── 🎤 ──────────────────▶ │  Raspberry Pi 4              │
                                       │  • Vosk (reconnaissance)     │ ──▶ 🔊 « Votre destination se trouve
-  👆 Toucher une carte / rechercher   │  • Matching flou (aliases)   │        au 2ème étage… »
-  ─────────── 📱 ──────────────────▶  │  • Piper (synthèse vocale)   │
+  👆 Toucher une carte / rechercher   │  • Matching flou (aliases)  │        au 2ème étage… »
+  ─────────── 📱 ──────────────────▶ │  • Piper (synthèse vocale)   │
                                       │  • rgbmatrix (LED)           │ ──▶ 💡 Chemin lumineux animé
                                       └──────────────────────────────┘        derrière le panneau
 ```
@@ -58,7 +58,7 @@ et **illumine le chemin** sur le panneau mural grâce à des matrices LED placé
 | Domaine | Détail |
 |---|---|
 | 🎤 **Reconnaissance vocale** | Français, hors-ligne, via [Vosk](https://alphacephei.com/vosk/) + `sounddevice`. Vocabulaire restreint (grammaire construite à partir des alias du CSV) pour être robuste au bruit du hall. |
-| 📱 **Interface tactile** (Kivy) | Grille de cartes colorées, barre de recherche avec clavier virtuel, filtres par étage, gros bouton micro animé, horloge, écran de veille avec logo. |
+| 📱 **Interface tactile** (Kivy) | Grille de cartes colorées, barre de recherche avec clavier virtuel, filtres par étage, gros bouton micro animé, horloge, écran de veille avec logo. (Python) |
 | 🔍 **Matching flou partagé** | Voix et recherche texte utilisent exactement la même logique (`core.trouver_destination`) : normalisation des accents, mots porteurs ignorés (« où est la salle… »), comptage par multiensemble (`Counter`), détection des réponses ambiguës. |
 | 🔊 **Réponse vocale** | Voix neuronale [Piper](https://github.com/rhasspy/piper) (`fr_FR-siwis-medium`), repli automatique sur `pyttsx3` (espeak-ng / SAPI5). |
 | 💡 **Chemin LED** | Animation point par point sur matrices HUB75 via [`rpi-rgb-led-matrix`](https://github.com/hzeller/rpi-rgb-led-matrix). Trajet en orange, arrivée en vert. |
